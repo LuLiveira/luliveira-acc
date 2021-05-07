@@ -1,7 +1,7 @@
-package br.com.luliveira.nu.service.impl.consumer;
+package br.com.luliveira.nu.services.impl.consumer;
 
 import br.com.luliveira.nu.entities.PedidoConta;
-import br.com.luliveira.nu.service.ValidarDadosAprovacaoService;
+import br.com.luliveira.nu.services.ValidarDadosAprovacaoService;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;

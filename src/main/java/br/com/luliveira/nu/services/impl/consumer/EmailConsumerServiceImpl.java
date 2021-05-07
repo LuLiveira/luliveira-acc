@@ -1,18 +1,19 @@
-package br.com.luliveira.nu.service.impl.consumer;
+package br.com.luliveira.nu.services.impl.consumer;
 
+import lombok.extern.log4j.Log4j2;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
-@Service
-public class EmailConsumerServiceImpl {
+import java.text.MessageFormat;
 
-    private final Logger LOG = LoggerFactory.getLogger(EmailConsumerServiceImpl.class);
+@Service
+@Log4j2
+public class EmailConsumerServiceImpl {
 
     @KafkaListener(topics = "SEND_EMAIL", groupId = "emails")
     public void executar(ConsumerRecord<String, Object> payload) {
-        LOG.info("Mensagem recebida: " + payload.value());
+        //TODO implementar envio de e-mail
+        log.info(MessageFormat.format("Email: {0} e mensagem: {1} ", payload.key(), payload.value()));
     }
 }

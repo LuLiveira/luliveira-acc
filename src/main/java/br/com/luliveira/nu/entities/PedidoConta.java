@@ -13,12 +13,7 @@ public class PedidoConta implements Serializable {
 
     private String nome;
     private String email;
-    private String logradouro;
-    private String numero;
-    private String bairro;
-    private String cep;
-    private String cidade;
-    private String estado;
+    private Endereco endereco;
     private String cpf;
     private String rg;
     private String estadoCivil;

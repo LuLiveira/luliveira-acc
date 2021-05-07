@@ -1,4 +1,4 @@
-package br.com.luliveira.nu.service;
+package br.com.luliveira.nu.services;
 
 import br.com.luliveira.nu.entities.PedidoConta;
 

@@ -1,4 +1,4 @@
-package br.com.luliveira.nu.repository.entidade;
+package br.com.luliveira.nu.repositories.entidade;
 
 import lombok.Getter;
 import lombok.Setter;

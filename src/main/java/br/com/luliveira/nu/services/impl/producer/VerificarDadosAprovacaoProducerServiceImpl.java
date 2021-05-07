@@ -1,8 +1,9 @@
-package br.com.luliveira.nu.service.impl.producer;
+package br.com.luliveira.nu.services.impl.producer;
 
 import br.com.luliveira.nu.entities.PedidoConta;
-import br.com.luliveira.nu.service.VerificarDadosAprovacaoProducerService;
+import br.com.luliveira.nu.services.VerificarDadosAprovacaoProducerService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
+@Log4j2
 public class VerificarDadosAprovacaoProducerServiceImpl implements VerificarDadosAprovacaoProducerService {
 
     @Value("${spring.kafka.producer.topic.verificar-dados}")
@@ -20,6 +22,7 @@ public class VerificarDadosAprovacaoProducerServiceImpl implements VerificarDado
 
     @Override
     public void executar(PedidoConta pedidoConta) {
+        log.info("Enviando mensagem para fila de verificação de dados.");
         kafkaTemplate.send(topicoVerificarDados, UUID.randomUUID().toString(), pedidoConta);
     }
 }

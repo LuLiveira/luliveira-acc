@@ -1,7 +1,7 @@
-package br.com.luliveira.nu.repository;
+package br.com.luliveira.nu.repositories;
 
 
-import br.com.luliveira.nu.repository.entidade.PedidoContaEntidade;
+import br.com.luliveira.nu.repositories.entidade.PedidoContaEntidade;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package br.com.luliveira.nu.repository.entidade;
+package br.com.luliveira.nu.repositories.entidade;
 
 import lombok.*;
 
@@ -16,5 +16,5 @@ public class UsuarioEntidade {
 
     @Id
     private String email;
-    private final String password = UUID.randomUUID().toString();
+    private String password = UUID.randomUUID().toString();
 }

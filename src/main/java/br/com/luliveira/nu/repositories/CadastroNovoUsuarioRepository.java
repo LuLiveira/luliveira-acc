@@ -1,7 +1,7 @@
-package br.com.luliveira.nu.repository;
+package br.com.luliveira.nu.repositories;
 
 
-import br.com.luliveira.nu.repository.entidade.UsuarioEntidade;
+import br.com.luliveira.nu.repositories.entidade.UsuarioEntidade;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
